@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c">
+    </meta>
+
+    <title>C Programming</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/KICT LOGO FINAL.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    .tabs ul li {
+        list-style-type: none;
+    }
+
+    .tabs ul li a {
+        font-size: 25px;
+        color: #4e4e4e !important;
+        font-weight: 500;
+    }
+
+    .tabs ul li a.active {
+        color: #f69050 !important;
+    }
+
+    .tabs ul li a:hover {
+        color: #f69050 !important;
+    }
+
+    #more {
+        display: none;
+    }
+
+    button {
+        border: none;
+        color: #f69050;
+    }
+</style>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container d-flex justify-content-between align-items-center" id="topbar-inner">
+            <div class="left-section">
+                <a href="#" class="text-decoration-none text-dark">Certificate Verification</a>
+            </div>
+            <div class="right-section d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/?size=25&id=p245zwoX4pkU&format=png&color=228BE6" alt=""> +91
+                    9909766990
+                </div>
+                <div class="ms-3 d-flex align-items-center">
+                    <i class="fas fa-envelope"></i> info@kictindia.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="img/Hori_Kict_Logo_White.jpg" alt=""
+                    height="50px"><img src="img/30.png" class="ms-3" height="60px"></p>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="login.html" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                <a href="#" class="nav-item nav-link">
+
+                    <div id="google_translate_element">
+                    </div>
+
+
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Course</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="courses.html">Course</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">C Language Course for
+                                Beginners
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Course Detail Start -->
+    <div class="container-xxl py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 wow fadeInUp">
+
+                    <div class="container">
+                        <div class="row g-5 justify-content-center">
+
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                                <h2>C Language Course for Beginners</h2>
+                                <p>Start at the beginning by learning C basics — an important foundation for building
+                                    and editing web pages.
+
+                                </p>
+                                <div class="d-flex">
+                                    <small><i class="fa fa-star text-warning"></i>
+                                        4.6</small>
+                                    <small style="margin-left: 15px;"><i class="fa fa-user-graduate"></i> 5.8L+
+                                        Learners
+                                    </small>
+                                    <small style="margin-left: 15px;"><i class="fa fa-user"></i>Beginner</small>
+                                    <small style="margin-left: 15px;"><i class="fa fa-clock me-2"></i> 2.0 Hrs</small>
+
+                                </div>
+                                <div class="image-div text-left mt-3">
+                                    <img src="img/WhatsApp Image.jpg" alt=""
+                                        style="height: 40px; width: 40px; border-radius: 50%;">
+                                    <span style="margin-left: 10px;"><b>Manav Patel</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-4">
+
+                        <div class="tab-pane container active" id="Overview">
+                            <h2>About this Course</h2>
+                            <p>C is a general-purpose programming language created by Dennis Ritchie at the Bell
+                                Laboratories in 1972. It is a very popular language, despite being old. The main
+                                reason for its popularity is because it is a fundamental language in the field of
+                                computer science. C is strongly associated with UNIX, as it was developed to write
+                                the UNIX operating system.</p>
+
+                            <h2 class="mt-4">
+                                Skills you'll gain
+                            </h2>
+
+                            <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">Structure pages with C</span>
+
+                            <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">C Syntax</span>
+
+                            <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">Write cleaner C</span>
+
+
+                        </div>
+
+                        <div class="container" id="Curriculum">
+
+                            <h2 class="mt-4">
+                                Syllabus
+                            </h2>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse1"
+                                            aria-expanded="false" aria-controls="flush-collapse1">
+                                            Module 1: Introduction to Programming
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse1" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>What is Programming?</li>
+                                                <li>Overview of Programming Languages</li>
+                                                <li>History and Evolution of C</li>
+                                                <li>Applications of C</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse2"
+                                            aria-expanded="false" aria-controls="flush-collapse2">
+                                            Module 2: Getting Started with C
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse2" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Setting up the Environment (IDE Installation:
+                                                    Code::Blocks, Dev C++, etc.)</li>
+                                                <li>Writing Your First C Program</li>
+                                                <li>Compiling and Executing C Programs</li>
+                                                <li>Understanding the Basic Structure of a C Program</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse3"
+                                            aria-expanded="false" aria-controls="flush-collapse3">
+                                            Module 3: Variables and Data Types
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse3" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Variables and Constants</li>
+                                                <li>Basic Data Types (int, char, float, double)</li>
+                                                <li>Input and Output Operations (printf, scanf)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse4"
+                                            aria-expanded="false" aria-controls="flush-collapse4">
+                                            Module 4: Operators and Expressions
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse4" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Arithmetic Operators</li>
+                                                <li>Relational Operators</li>
+                                                <li>Logical Operators</li>
+                                                <li>Assignment Operators</li>
+                                                <li>Bitwise Operators</li>
+                                                <li>Miscellaneous Operators</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse5"
+                                            aria-expanded="false" aria-controls="flush-collapse5">
+                                            Module 5: Control Structures
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse5" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Decision Making (if, if-else, nested if, switch-case)
+                                                </li>
+                                                <li>Looping (for, while, do-while)</li>
+                                                <li>Jump Statements (break, continue, goto)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse6"
+                                            aria-expanded="false" aria-controls="flush-collapse6">
+                                            Module 6: Arrays and Strings
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse6" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>One-dimensional Arrays</li>
+                                                <li>Multi-dimensional Arrays</li>
+                                                <li>Character Arrays and Strings</li>
+                                                <li>String Handling Functions</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse7"
+                                            aria-expanded="false" aria-controls="flush-collapse7">
+                                            Module 7: Pointers
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse7" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Understanding Pointers</li>
+                                                <li>Pointer Arithmetic</li>
+                                                <li>Pointers and Arrays</li>
+                                                <li>Pointers to Pointers</li>
+                                                <li>Dynamic Memory Allocation (malloc, calloc, realloc,
+                                                    free)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse8"
+                                            aria-expanded="false" aria-controls="flush-collapse8">
+                                            Module 8: Introduction to Functions
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse8" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Defining and Calling Functions</li>
+                                                <li>Function Prototypes</li>
+                                                <li>Passing Arguments to Functions</li>
+                                                <li>Return Values</li>
+                                                <li>Scope, Storage Classes, and Recursion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse9"
+                                            aria-expanded="false" aria-controls="flush-collapse9">
+                                            Module 9: Structures
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse9" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Defining Structures</li>
+                                                <li>Accessing Structure Members</li>
+                                                <li>Array of Structures</li>
+                                                <li>Nested Structures</li>
+                                                <li>Structures and Functions</li>
+                                                <li>Pointers to Structures</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse10"
+                                            aria-expanded="false" aria-controls="flush-collapse10">
+                                            Module 10: Unions
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse10" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Defining Unions</li>
+                                                <li>Difference between Structures and Unions</li>
+                                                <li>Union within Structures</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse11"
+                                            aria-expanded="false" aria-controls="flush-collapse11">
+                                            Module 11: Basics of File Handling
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse11" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>File Operations (Opening, Closing, Reading, Writing)
+                                                </li>
+                                                <li>File Pointers</li>
+                                                <li>Error Handling</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse12"
+                                            aria-expanded="false" aria-controls="flush-collapse12">
+                                            Module 12: Advanced File Operations
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse12" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Sequential vs Random Access</li>
+                                                <li>Binary Files</li>
+                                                <li>File I/O Functions (fscanf, fprintf, fgetc, fputc,
+                                                    fgets, fputs)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse13"
+                                            aria-expanded="false" aria-controls="flush-collapse13">
+                                            Module 13: C Standard Library
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse13" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Standard Library Functions</li>
+                                                <li>Header Files</li>
+                                                <li>Commonly Used Libraries (stdio.h, stdlib.h, string.h,
+                                                    math.h)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse14"
+                                            aria-expanded="false" aria-controls="flush-collapse14">
+                                            Module 14: Course Review
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse14" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Summary of Key Concepts</li>
+                                                <li>Practice Problems</li>
+                                                <li>FAQs and Common Mistakes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse15"
+                                            aria-expanded="false" aria-controls="flush-collapse15">
+                                            Module 15: Final Examination
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse15" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Theory Exam</li>
+                                                <li>Practical Exam</li>
+                                                <li>Project Presentation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="container" id="Instructor">
+                            <h2 class="mt-4">About the Instructor</h2>
+                            <div class="image-div text-left mt-4">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <img src="img/WhatsApp Image.jpg" alt=""
+                                            style="height: 150px; width: 150px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-lg-9 col-md-6 mt-2">
+                                        <h5>Manav Patel</h5>
+                                        <p>Developer</p>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p><i class="fa fa-star"></i>
+                                                    4.87 Instructor rating</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p> <i class="fa fa-check
+                                                    
+                                                    
+                                                     "></i>
+                                                    1,533 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p><i class="fa fa-user"></i>
+                                                    20 Students</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p><i class="fa fa-video"></i>
+                                                    29 courses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="des mt-4 mb-5">
+                                    Curriculum Director at Codecademy and creative technologist. She has designed a
+                                    range of Codecademy courses, including Learn HTML, CSS, JavaScript, C, C++,
+                                    Java, Python and the beginner-friendly Learn How to Code.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 shadow wow fadeInUp" data-wow-delay="0.3s">
+
+                    <div class="image text-center">
+                        <img class="img-fluid mt-2" src="img/c-language.jpeg" alt="" height="200px" width="500px">
+                    </div>
+
+                    <h4 class="mt-2 p-2">Free <small></small></h4>
+
+                    <h4 class="mt-2 p-2">$
+                        <small><del>20</del></small>
+                    </h4>
+
+
+                    <div class="buttons">
+
+                        <a href="#" class="text-decoration-none text-white btn p-3 w-100 mb-2">ENROLL NOW</a>
+
+
+
+                    </div>
+                    <div class="list mt-2">
+                        <div class="list1 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-clock"></i> Duration</p>
+                            <p>2.0 Hrs</p>
+                        </div>
+                        <div class="list2 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-book"></i> Lectures</p>
+                            <p>4</p>
+                        </div>
+                        <div class="list3 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-bolt"></i> Enrolled</p>
+                            <p>240 students</p>
+                        </div>
+                        <div class="list4 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-google-translate"></i> Language</p>
+                            <p>English</p>
+                        </div>
+                        <div class="list5 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-list"></i> Skill Level</p>
+                            <p>Beginner</p>
+                        </div>
+                        <div class="list6 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-list"></i> Deadline</p>
+                            <p>Life Time</p>
+                        </div>
+                        <div class="list7 d-flex justify-content-between pt-2 border-bottom">
+                            <p><i class="fa fa-certificate"></i> Certificate</p>
+                            <p>Yes</p>
+                        </div>
+                        <div class="button pt-4 text-center mb-4">
+                            <i class="fa fa-share"></i><a href=""> Share this Course</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Course Detail End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <p><a class="text-light" href="about.html">About Us</a></p>
+                    <p><a class="text-light" href="contact.html">Contact Us</a></p>
+                    <p><a class="text-light" href="">Privacy Policy</a></p>
+                    <p><a class="text-light" href="">Terms & Condition</a></p>
+                    <p><a class="text-light" href="">FAQs & Help</a></p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>EL-6,10,15,19, Manorath Complex, Satadhar
+                        Cross Road, Ahmedabad, Gujarat, India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9909766990</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kictindia.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://x.com/kictindia?t=UNfWzwnjnavRhhwa8BVn_Q&s=09"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.facebook.com/profile.php?id=61556638370345&mibextid=ZbWKwL"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://youtube.com/@kictindia?si=tC_qlMXw8ynA2opT"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/in/kict-india-8408252b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Subscribe to our Newsletter</h4>
+                    <p>Subscribe now and join our growing community of learners committed to lifelong education! </p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <form action="#">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Enter Name" required>
+                            <div class="d-flex">
+                                <input class="form-control border-0 w-100 py-3 ps-4 pe-5 mt-1" type="text"
+                                    placeholder="Enter Number" required>
+                                <button type="submit" class="btn btn-primary mt-1"><a
+                                        href="info@kictindia.com">Subscribe</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">KICT</a>, All Right Reserved.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    
+    <div class="footer_sticky">
+        <a href="https://api.whatsapp.com/send/?phone=919909766990&text&type=phone_number&app_absent=0" class="float"
+            target="_blank">
+            <i class="fa-brands fa-whatsapp my-float"></i>
+
+        </a>
+        <footer class="mt-5 text-center">
+            <div class="footer-bar">
+                <div class="footer-bar-location">
+                    <a href="#">location</a>
+                </div>
+                <div class="footer-bar-demo">
+                    <a href="#">Book Free Demo</a>
+                </div>
+                <a href="#">
+
+                </a>
+            </div>
+        </footer>
+    </div>
+    <div class="accordion query" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button bg-warning text-dark fw-bold query-ask" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Ask Query
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <table>
+                        <form>
+                            <tr>
+                                <textarea class="textarea" placeholder="Drop your Query" name="" id=""></textarea>
+                            </tr>
+                            <tr>
+                                <input class="textarea my-2" type="text" placeholder="Enter Your Phone No">
+                            </tr>
+                            <tr>
+                                <input class="textarea my-2" type="text" placeholder="Enter Your Email..">
+                            </tr>
+                            <tr>
+                                <input class="textarea my-2" type="text" placeholder="Enter Your Course">
+                            </tr>
+                            <tr>
+                                <input class="textarea my-2 bg-warning text-light fw-bold" type="submit"
+                                    value="Send Query">
+                            </tr>
+
+                        </form>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
